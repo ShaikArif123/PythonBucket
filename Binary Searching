@@ -1,0 +1,25 @@
+list = [1,4,5,7,9,34,77,99,100]
+n = 99
+pos = 0
+
+def search(list , n):
+    l = 0
+    u = len(list)-1
+    for i in list:
+        mid = (l+u)//2
+        if list[mid]==n:
+            globals()["pos"]=mid
+            return True
+        else:
+            if n > list[mid]:
+                l = mid
+            else:
+                u = mid
+    return False
+        
+
+if search(list , n):
+    print("Found on" , pos)
+else:
+    print("Not Found")
+

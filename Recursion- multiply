@@ -1,0 +1,17 @@
+def multiply(n):
+    if n ==1:
+       return 1
+    
+    return n* multiply(n-1)
+    
+num = int(input('enter value:'))
+result = multiply(num) 
+print(result)   
+
+
+
+
+
+# Sum of first n numbers using recursion
+
+# addition[5-line] =>  return my_function(n-1)+n
